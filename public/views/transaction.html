@@ -87,6 +87,22 @@
             </div>
           </td>
         </tr>
+	<tr data-ng-show="tx.isStakeGen">
+          <td><strong>Ticket that was spent</strong></td>
+          <td class="text-muted text-right">
+            <div class="ellipsis">
+              <a href="/tx/{{tx.ticketid}}">{{tx.ticketid}}</a>
+            </div>
+          </td>
+        </tr>
+	<tr data-ng-show="tx.isStakeRtx">
+          <td><strong>Ticket that was revoked</strong></td>
+          <td class="text-muted text-right">
+            <div class="ellipsis">
+              <a href="/tx/{{tx.ticketid}}">{{tx.ticketid}}</a>
+            </div>
+          </td>
+        </tr>
         </tbody>
       </table>
     </div>
