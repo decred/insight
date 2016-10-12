@@ -4,12 +4,12 @@
       <a class="btn-expand" href="#" title="Show/Hide items details" data-ng-click="itemsExpanded = !itemsExpanded">
         <span class="glyphicon glyphicon-plus-sign" data-ng-class="{'glyphicon-minus-sign': itemsExpanded}"></span>
       </a>
-      <span data-ng-if="tx.isStakeGen" translate>Vote</span>
-      <span data-ng-if="tx.isStakeRtx" translate>Revocation</span>
-      <span data-ng-if="tx.isCoinBase" translate>CoinBase</span>
-      <span data-ng-if="tx.isStakeTx" translate>Ticket</span>
       <a href="/tx/{{tx.txid}}">{{tx.txid}}</a>
       <span class="btn-copy" clip-copy="tx.txid"></span>
+      <span data-ng-if="tx.isStakeGen" class="txvalues txvalues-default" translate>Vote</span>
+      <span data-ng-if="tx.isStakeRtx" class="txvalues txvalues-default" translate>Revocation</span>
+      <span data-ng-if="tx.isCoinBase" class="txvalues txvalues-default" translate>CoinBase</span>
+      <span data-ng-if="tx.isStakeTx" class="txvalues txvalues-default" translate>Ticket</span>
     </div>
   </div>
   <div class="col-xs-5 col-md-4 text-right text-muted">
