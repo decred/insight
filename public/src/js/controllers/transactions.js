@@ -94,6 +94,12 @@ function($scope, $rootScope, $routeParams, $location, Global, Transaction, Trans
 	  return 1;
 	} else if (a.isStakeTx && b.isStakeTx) {
 	  return 0;
+	} else if (a.isStakeRtx && !b.isStakeRtx) {
+	  return -1;
+	} else if (!a.isStakeRtx && b.isStakeRtx) {
+	  return 1;
+	} else if (a.isStakeRtx && b.isStakeRtx) {
+	  return 0;
 	} else if (a.isCoinBase && !b.isCoinBase) {
 	  return -1;
 	} else if (!a.isCoinBase && b.isCoinBase) {
