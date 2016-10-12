@@ -30,45 +30,6 @@
     </div>
     <div class="row" data-ng-if="tx.isStakeGen">
       <span translate>Vote</span>
-      <!-- <<< Simple view for SSGen -->
-      <div data-ng-if="!itemsExpanded" data-ng-init="currentInNoExpanded=0; sizeInNoExpanded=5">
-        <div class="panel panel-default" data-ng-repeat="vin in tx.vinSimple| startFrom:currentInNoExpanded*sizeInNoExpanded | limitTo:sizeInNoExpanded">
-          <div class="panel-body transaction-vin-vout" data-ng-if="vin.items[0].isStakeBase">
-            <div class="ellipsis">
-              <span translate>Stake Base (Newly Generated Coins)</span>
-            </div>
-          </div>
-          <div class="panel-body transaction-vin-vout" data-ng-if="!vin.items[0].isStakeBase">
-            <div class="pull-right dcr-value" data-ng-class="{'text-danger': $root.currentAddr == vin.addr}">
-              {{$root.currency.getConvertion(vin.value) || vin.value + ' DCR'}}
-            </div>
-            <div class="ellipsis">
-              <span data-ng-show="vin.notAddr">{{vin.addr}}</span>
-
-              <span class="text-muted" title="Current Bitcoin Address" data-ng-show="vin.addr == $root.currentAddr">{{vin.addr}}</span>
-              <a href="/address/{{vin.addr}}" data-ng-show="!vin.notAddr && vin.addr != $root.currentAddr">{{vin.addr}}</a>
-            </div>
-	    <div data-ng-show="vin.unconfirmedInput"
-	    class="text-danger"> <span class="glyphicon glyphicon-warning-sign"></span></div>
-            <div data-ng-show="vin.dbError" class="text-danger">
-              <span class="glyphicon glyphicon-warning-sign"></span> 
-              <span translate>Incoherence in levelDB detected:</span> {{vin.dbError}}
-            </div>
-            <div data-ng-show="vin.doubleSpentTxID" class="text-danger"> 
-              <span class="glyphicon glyphicon-warning-sign"></span> 
-              <span translate>Double spent attempt detected. From tx:</span> 
-              <a href="/tx/{{vin.doubleSpentTxID}}">{{vin.doubleSpentTxID}},{{vin.doubleSpentIndex}}</a>
-            </div>
-          </div>
-        </div>
-        <div class="showmore_collapse text-left" data-ng-show="tx.vinSimple.length > 5" data-ng-class="{ 'hidden': itemsExpanded}">
-          <button type="button" class="btn btn-info btn-sm" ng-hide="sizeInNoExpanded != tx.vinSimple.length" ng-click="currentInNoExpanded=0; sizeInNoExpanded=5"><i class="glyphicon glyphicon-chevron-up"></i> 
-            <span translate>Show less</span></button>
-          <button type="button" class="btn btn-info btn-sm" ng-hide="currentInNoExpanded >= tx.vinSimple.length/sizeInNoExpanded - 1" ng-click="currentInNoExpanded=0; sizeInNoExpanded=tx.vinSimple.length"><i class="glyphicon glyphicon-chevron-down"></i> 
-            <span translate>Show more</span></button>
-        </div>
-      </div>
-
       <!-- <<< Full view  for SSGen -->
       <div data-ng-if="itemsExpanded" data-ng-init="currentInExpanded=0; sizeInExpanded=(from_vin) ? tx.vin.length : 5; fromVinCollapsed=(from_vin)">
         <div data-ng-repeat="vin in tx.vin| startFrom:currentInExpanded*sizeInExpanded | limitTo:sizeInExpanded" data-ng-if="fromVinCollapsed ? v_index == vin.n : 1">
@@ -127,38 +88,6 @@
     </div>  <!-- end of ssgen row -->
     <div class="row" data-ng-if="tx.isStakeTx">
       <span translate>Ticket</span>
-      <!-- <<< Simple view for SStx -->
-      <div data-ng-if="!itemsExpanded" data-ng-init="currentInNoExpanded=0; sizeInNoExpanded=5">
-        <div class="panel panel-default" data-ng-repeat="vin in tx.vinSimple| startFrom:currentInNoExpanded*sizeInNoExpanded | limitTo:sizeInNoExpanded">
-          <div class="panel-body transaction-vin-vout">
-            <div class="pull-right dcr-value" data-ng-class="{'text-danger': $root.currentAddr == vin.addr}">
-              {{$root.currency.getConvertion(vin.value) || vin.value + ' DCR'}}
-            </div>
-            <div class="ellipsis">
-              <span data-ng-show="vin.notAddr">{{vin.addr}}</span>
-              <span class="text-muted" title="Current Bitcoin Address" data-ng-show="vin.addr == $root.currentAddr">{{vin.addr}}</span>
-              <a href="/address/{{vin.addr}}" data-ng-show="!vin.notAddr && vin.addr != $root.currentAddr">{{vin.addr}}</a>
-            </div>
-            <div data-ng-show="vin.unconfirmedInput" class="text-danger"> <span class="glyphicon glyphicon-warning-sign"></span> (Input unconfirmed)</div>
-            <div data-ng-show="vin.dbError" class="text-danger">
-              <span class="glyphicon glyphicon-warning-sign"></span> 
-              <span translate>Incoherence in levelDB detected:</span> {{vin.dbError}}
-            </div>
-            <div data-ng-show="vin.doubleSpentTxID" class="text-danger"> 
-              <span class="glyphicon glyphicon-warning-sign"></span> 
-              <span translate>Double spent attempt detected. From tx:</span> 
-              <a href="/tx/{{vin.doubleSpentTxID}}">{{vin.doubleSpentTxID}},{{vin.doubleSpentIndex}}</a>
-            </div>
-          </div>
-        </div>
-        <div class="showmore_collapse text-left" data-ng-show="tx.vinSimple.length > 5" data-ng-class="{ 'hidden': itemsExpanded}">
-          <button type="button" class="btn btn-info btn-sm" ng-hide="sizeInNoExpanded != tx.vinSimple.length" ng-click="currentInNoExpanded=0; sizeInNoExpanded=5"><i class="glyphicon glyphicon-chevron-up"></i> 
-            <span translate>Show less</span></button>
-          <button type="button" class="btn btn-info btn-sm" ng-hide="currentInNoExpanded >= tx.vinSimple.length/sizeInNoExpanded - 1" ng-click="currentInNoExpanded=0; sizeInNoExpanded=tx.vinSimple.length"><i class="glyphicon glyphicon-chevron-down"></i> 
-            <span translate>Show more</span></button>
-        </div>
-      </div>
-
       <!-- <<< Full view  for SStx -->
       <div data-ng-if="itemsExpanded" data-ng-init="currentInExpanded=0; sizeInExpanded=(from_vin) ? tx.vin.length : 5; fromVinCollapsed=(from_vin)">
         <div data-ng-repeat="vin in tx.vin| startFrom:currentInExpanded*sizeInExpanded | limitTo:sizeInExpanded" data-ng-if="fromVinCollapsed ? v_index == vin.n : 1">
@@ -212,38 +141,6 @@
     </div>  <!-- end of sstx row -->
     <div class="row" data-ng-if="tx.isStakeRTx">
       <span translate>Revocation</span>
-      <!-- <<< Simple view for SSRTX -->
-      <div data-ng-if="!itemsExpanded" data-ng-init="currentInNoExpanded=0; sizeInNoExpanded=5">
-        <div class="panel panel-default" data-ng-repeat="vin in tx.vinSimple| startFrom:currentInNoExpanded*sizeInNoExpanded | limitTo:sizeInNoExpanded">
-          <div class="panel-body transaction-vin-vout">
-            <div class="pull-right dcr-value" data-ng-class="{'text-danger': $root.currentAddr == vin.addr}">
-              {{$root.currency.getConvertion(vin.value) || vin.value + ' DCR'}}
-            </div>
-            <div class="ellipsis">
-              <span data-ng-show="vin.notAddr">{{vin.addr}}</span>
-              <span class="text-muted" title="Current Bitcoin Address" data-ng-show="vin.addr == $root.currentAddr">{{vin.addr}}</span>
-              <a href="/address/{{vin.addr}}" data-ng-show="!vin.notAddr && vin.addr != $root.currentAddr">{{vin.addr}}</a>
-            </div>
-            <div data-ng-show="vin.unconfirmedInput" class="text-danger"> <span class="glyphicon glyphicon-warning-sign"></span> (Input unconfirmed)</div>
-            <div data-ng-show="vin.dbError" class="text-danger">
-              <span class="glyphicon glyphicon-warning-sign"></span> 
-              <span translate>Incoherence in levelDB detected:</span> {{vin.dbError}}
-            </div>
-            <div data-ng-show="vin.doubleSpentTxID" class="text-danger"> 
-              <span class="glyphicon glyphicon-warning-sign"></span> 
-              <span translate>Double spent attempt detected. From tx:</span> 
-              <a href="/tx/{{vin.doubleSpentTxID}}">{{vin.doubleSpentTxID}},{{vin.doubleSpentIndex}}</a>
-            </div>
-          </div>
-        </div>
-        <div class="showmore_collapse text-left" data-ng-show="tx.vinSimple.length > 5" data-ng-class="{ 'hidden': itemsExpanded}">
-          <button type="button" class="btn btn-info btn-sm" ng-hide="sizeInNoExpanded != tx.vinSimple.length" ng-click="currentInNoExpanded=0; sizeInNoExpanded=5"><i class="glyphicon glyphicon-chevron-up"></i> 
-            <span translate>Show less</span></button>
-          <button type="button" class="btn btn-info btn-sm" ng-hide="currentInNoExpanded >= tx.vinSimple.length/sizeInNoExpanded - 1" ng-click="currentInNoExpanded=0; sizeInNoExpanded=tx.vinSimple.length"><i class="glyphicon glyphicon-chevron-down"></i> 
-            <span translate>Show more</span></button>
-        </div>
-      </div>
-
       <!-- <<< Full view  for SSRTX -->
       <div data-ng-if="itemsExpanded" data-ng-init="currentInExpanded=0; sizeInExpanded=(from_vin) ? tx.vin.length : 5; fromVinCollapsed=(from_vin)">
         <div data-ng-repeat="vin in tx.vin| startFrom:currentInExpanded*sizeInExpanded | limitTo:sizeInExpanded" data-ng-if="fromVinCollapsed ? v_index == vin.n : 1">
@@ -296,38 +193,6 @@
       </div>
     </div>  <!-- end of ssrtx row -->
     <div class="row" data-ng-if="!tx.isCoinBase && !tx.isStakeTx && !tx.isStakeGen && !tx.isStakeRTx">
-      <!-- <<< Simple view for NORMAL TX -->
-      <div data-ng-if="!itemsExpanded" data-ng-init="currentInNoExpanded=0; sizeInNoExpanded=5">
-        <div class="panel panel-default" data-ng-repeat="vin in tx.vinSimple| startFrom:currentInNoExpanded*sizeInNoExpanded | limitTo:sizeInNoExpanded">
-          <div class="panel-body transaction-vin-vout">
-            <div class="pull-right dcr-value" data-ng-class="{'text-danger': $root.currentAddr == vin.addr}">
-              {{$root.currency.getConvertion(vin.value) || vin.value + ' DCR'}}
-            </div>
-            <div class="ellipsis">
-              <span data-ng-show="vin.notAddr">{{vin.addr}}</span>
-              <span class="text-muted" title="Current Bitcoin Address" data-ng-show="vin.addr == $root.currentAddr">{{vin.addr}}</span>
-              <a href="/address/{{vin.addr}}" data-ng-show="!vin.notAddr && vin.addr != $root.currentAddr">{{vin.addr}}</a>
-            </div>
-            <div data-ng-show="vin.unconfirmedInput" class="text-danger"> <span class="glyphicon glyphicon-warning-sign"></span> (Input unconfirmed)</div>
-            <div data-ng-show="vin.dbError" class="text-danger">
-              <span class="glyphicon glyphicon-warning-sign"></span> 
-              <span translate>Incoherence in levelDB detected:</span> {{vin.dbError}}
-            </div>
-            <div data-ng-show="vin.doubleSpentTxID" class="text-danger"> 
-              <span class="glyphicon glyphicon-warning-sign"></span> 
-              <span translate>Double spent attempt detected. From tx:</span> 
-              <a href="/tx/{{vin.doubleSpentTxID}}">{{vin.doubleSpentTxID}},{{vin.doubleSpentIndex}}</a>
-            </div>
-          </div>
-        </div>
-        <div class="showmore_collapse text-left" data-ng-show="tx.vinSimple.length > 5" data-ng-class="{ 'hidden': itemsExpanded}">
-          <button type="button" class="btn btn-info btn-sm" ng-hide="sizeInNoExpanded != tx.vinSimple.length" ng-click="currentInNoExpanded=0; sizeInNoExpanded=5"><i class="glyphicon glyphicon-chevron-up"></i> 
-            <span translate>Show less</span></button>
-          <button type="button" class="btn btn-info btn-sm" ng-hide="currentInNoExpanded >= tx.vinSimple.length/sizeInNoExpanded - 1" ng-click="currentInNoExpanded=0; sizeInNoExpanded=tx.vinSimple.length"><i class="glyphicon glyphicon-chevron-down"></i> 
-            <span translate>Show more</span></button>
-        </div>
-      </div>
-
       <!-- <<< Full view  for NORMAL TX -->
       <div data-ng-if="itemsExpanded" data-ng-init="currentInExpanded=0; sizeInExpanded=(from_vin) ? tx.vin.length : 5; fromVinCollapsed=(from_vin)">
         <div data-ng-repeat="vin in tx.vin| startFrom:currentInExpanded*sizeInExpanded | limitTo:sizeInExpanded" data-ng-if="fromVinCollapsed ? v_index == vin.n : 1">
@@ -381,9 +246,6 @@
     </div>  <!-- end of normal tx row -->
   </div>
   <div class="col-md-1 col-xs-12">
-    <div class="hidden-xs hidden-sm text-center">
-      <span class="lead glyphicon glyphicon-chevron-right text-muted"></span>
-    </div>
     <div class="hidden-md hidden-lg text-center">
       <span class="lead glyphicon glyphicon-chevron-down text-muted"></span>
     </div>
@@ -391,41 +253,6 @@
   <div class="col-md-6">
     <div class="row">
       <!-- Simple view >>> -->
-      <div data-ng-if="!itemsExpanded" data-ng-init="currentOutNoExpanded=0; sizeOutNoExpanded=5">
-        <div data-ng-repeat="vout in tx.voutSimple| startFrom:currentOutNoExpanded*sizeOutNoExpanded | limitTo:sizeOutNoExpanded">
-          <div class="transaction-vin-vout panel panel-default">
-            <div class="panel-body">
-              <div class="pull-right dcr-value"
-		   data-ng-class="{'text-success': $root.currentAddr
-				  == vout.addr}" data-ng-if="!vout.notAddr">
-                {{$root.currency.getConvertion(vout.value) || vout.value + ' DCR' }}
-                <span class="text-danger" data-ng-show="vout.isSpent" tooltip="Output is spent" tooltip-placement="left">(S)</span>
-                <span class="text-success" data-ng-show="!vout.isSpent"  tooltip="Output is unspent" tooltip-placement="left">(U)</span>
-              </div>
-
-              <div class="ellipsis">
-		<span data-ng-if="vout.notAddr && tx.isCoinBase">{{vout.items[0].scriptPubKey.hex}}</span>
-		<span data-ng-if="vout.notAddr && vout.addr ==
-				  'Unparsed address [0]' && tx.isStakeGen">Block Commitment</span>
-		<span data-ng-if="vout.notAddr && vout.addr ==
-				  'Unparsed address [1]' &&
-				  tx.isStakeGen">Vote Bits</span>
-		<span data-ng-if="vout.notAddr &&
-				  tx.isStakeTx">Subsidy Commitment</span>
-                <span class="text-muted" title="Current Bitcoin Address" data-ng-show="address == $root.currentAddr" data-ng-repeat="address in vout.addr.split(',')">{{vout.addr}}</span>
-                <a href="/address/{{address}}"  data-ng-show="!vout.notAddr && address != $root.currentAddr" data-ng-repeat="address in vout.addr.split(',')">{{address}}</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="showmore_collapse text-left" data-ng-show="tx.voutSimple.length > 5" data-ng-class="{ 'hidden': itemsExpanded}">
-          <button type="button" class="btn btn-info btn-sm" ng-hide="sizeOutNoExpanded != tx.voutSimple.length" ng-click="currentOutNoExpanded=0; sizeOutNoExpanded=5"><i class="glyphicon glyphicon-chevron-up"></i> 
-            <span translate>Show less</span></button>
-          <button type="button" class="btn btn-info btn-sm" ng-hide="currentOutNoExpanded >= tx.voutSimple.length/sizeOutNoExpanded - 1" ng-click="currentOutNoExpanded=0; sizeOutNoExpanded=tx.voutSimple.length"><i class="glyphicon glyphicon-chevron-down"></i> 
-            <span translate>Show more</span></button>
-        </div>
-      </div>
-
       <!-- Full view >>> -->
       <div data-ng-if="itemsExpanded" data-ng-init="currentOutExpanded=0; sizeOutExpanded=(from_vout) ? tx.vout.length : 5; fromVoutCollapsed=(from_vout)">
         <div data-ng-repeat="vout in tx.vout| startFrom:currentOutExpanded*sizeOutExpanded | limitTo:sizeOutExpanded" data-ng-if="fromVoutCollapsed ? v_index == vout.n : 1">
@@ -475,11 +302,11 @@
 
 <div class="line-top row" data-ng-hide="!tx">
   <div class="col-xs-6 col-sm-6 col-md-7">
-    <span data-ng-show="!tx.isCoinBase &&  !isNaN(parseFloat(tx.fees))"
+    <span data-ng-show="!tx.isCoinBase && !tx.isStakeGen && !isNaN(parseFloat(tx.fees))"
       class="txvalues txvalues-default"><span translate>Fee</span>: {{$root.currency.getConvertion(tx.fees) || tx.fees + 'DCR'}} </span>
     <span data-ng-show="tx.size"
       class="txvalues txvalues-default"><span translate>Size</span>: {{tx.size}} bytes</span>
-    <span data-ng-show="!tx.isCoinBase &&  !isNaN(parseFloat(tx.fees))"
+    <span data-ng-show="!tx.isCoinBase &&  !tx.isStakeGen && !isNaN(parseFloat(tx.fees))"
       class="txvalues txvalues-default"><span translate>Fee Rate</span>:{{$root.currency.getConvertion((tx.fees * 1000) / tx.size) + ' per kB' || ((tx.fees * 1000) / tx.size) + 'DCR per kB'}}</span>
   </div>
   <div class="col-xs-6 col-sm-6 col-md-5 text-right">
