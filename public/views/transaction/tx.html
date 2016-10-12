@@ -23,7 +23,7 @@
     </div>
   </div>
 </div>
-<div class="row line-mid">
+<div class="row line-mid" data-ng-if="itemsExpanded">
   <div class="col-md-5">  <!-- tx.vins -->
     <div class="row" data-ng-if="tx.isCoinBase && itemsExpanded">
       <div class="col-md-12 transaction-vin-vout" data-ng-repeat="vin in tx.vin">
