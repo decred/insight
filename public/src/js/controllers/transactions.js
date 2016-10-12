@@ -80,18 +80,35 @@ function($scope, $rootScope, $routeParams, $location, Global, Transaction, Trans
   };
 
   var _paginate = function(data) {
-    // Add new sorting by time. Newest first.
     newdata = data.txs.sort(function(a, b) {
-      if (a.time < b.time) {
-        return 1;
-      }
-      if (a.time > b.time) {
+      if (a.isStakeGen && !b.isStakeGen) {
         return -1;
+      } else if (!a.isStakeGen && b.isStakeGen) {
+        return 1;
+      } else if (a.isStakeGen && b.isStakeGen) {
+	return 0;
+      } else if (!a.isStakeGen && !b.isStakeGen) {
+        if (a.isStakeTx && !b.isStakeTx) {
+	  return -1;
+	} else if (!a.isStakeTx && b.isStakeTx) {
+	  return 1;
+	} else if (a.isStakeTx && b.isStakeTx) {
+	  return 0;
+	} else if (a.isCoinBase && !b.isCoinBase) {
+	  return -1;
+	} else if (!a.isCoinBase && b.isCoinBase) {
+	  return 1;
+	} else if (a.fees > b.fees) {
+	  return -1;
+	} else if (a.fees < b.fees) { 
+	  return 1; 
+        }
       }
       return 0;
     });
-
+    console.log("before", data.txs);
     data.txs = newdata;
+    console.log("after", data.txs);
     $scope.loading = false;
 
     pagesTotal = data.pagesTotal;
