@@ -4,6 +4,10 @@
       <a class="btn-expand" href="#" title="Show/Hide items details" data-ng-click="itemsExpanded = !itemsExpanded">
         <span class="glyphicon glyphicon-plus-sign" data-ng-class="{'glyphicon-minus-sign': itemsExpanded}"></span>
       </a>
+      <span data-ng-if="tx.isStakeGen" translate>Vote</span>
+      <span data-ng-if="tx.isStakeRtx" translate>Revocation</span>
+      <span data-ng-if="tx.isCoinBase" translate>CoinBase</span>
+      <span data-ng-if="tx.isStakeTx" translate>Ticket</span>
       <a href="/tx/{{tx.txid}}">{{tx.txid}}</a>
       <span class="btn-copy" clip-copy="tx.txid"></span>
     </div>
@@ -21,7 +25,7 @@
 </div>
 <div class="row line-mid">
   <div class="col-md-5">  <!-- tx.vins -->
-    <div class="row" data-ng-if="tx.isCoinBase">
+    <div class="row" data-ng-if="tx.isCoinBase && itemsExpanded">
       <div class="col-md-12 transaction-vin-vout" data-ng-repeat="vin in tx.vin">
         <div class="ellipsis">
           <span translate>No Inputs (Newly Generated Coins)</span>
@@ -29,7 +33,6 @@
       </div>
     </div>
     <div class="row" data-ng-if="tx.isStakeGen">
-      <span translate>Vote</span>
       <!-- <<< Full view  for SSGen -->
       <div data-ng-if="itemsExpanded" data-ng-init="currentInExpanded=0; sizeInExpanded=(from_vin) ? tx.vin.length : 5; fromVinCollapsed=(from_vin)">
         <div data-ng-repeat="vin in tx.vin| startFrom:currentInExpanded*sizeInExpanded | limitTo:sizeInExpanded" data-ng-if="fromVinCollapsed ? v_index == vin.n : 1">
@@ -87,7 +90,6 @@
       </div>
     </div>  <!-- end of ssgen row -->
     <div class="row" data-ng-if="tx.isStakeTx">
-      <span translate>Ticket</span>
       <!-- <<< Full view  for SStx -->
       <div data-ng-if="itemsExpanded" data-ng-init="currentInExpanded=0; sizeInExpanded=(from_vin) ? tx.vin.length : 5; fromVinCollapsed=(from_vin)">
         <div data-ng-repeat="vin in tx.vin| startFrom:currentInExpanded*sizeInExpanded | limitTo:sizeInExpanded" data-ng-if="fromVinCollapsed ? v_index == vin.n : 1">
@@ -140,7 +142,6 @@
       </div>
     </div>  <!-- end of sstx row -->
     <div class="row" data-ng-if="tx.isStakeRTx">
-      <span translate>Revocation</span>
       <!-- <<< Full view  for SSRTX -->
       <div data-ng-if="itemsExpanded" data-ng-init="currentInExpanded=0; sizeInExpanded=(from_vin) ? tx.vin.length : 5; fromVinCollapsed=(from_vin)">
         <div data-ng-repeat="vin in tx.vin| startFrom:currentInExpanded*sizeInExpanded | limitTo:sizeInExpanded" data-ng-if="fromVinCollapsed ? v_index == vin.n : 1">
