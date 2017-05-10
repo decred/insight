@@ -370,7 +370,9 @@ margin-left: 0;
   background-color: #EBEBEB;
   color: #333;
 }
-
+.txvalues-agendas {
+  margin-right: 3px;
+}
 .txvalues-success {
   background-color: #2FA4D7;
 }

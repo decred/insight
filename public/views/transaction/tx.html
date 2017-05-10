@@ -307,8 +307,7 @@
       class="txvalues txvalues-default"><span translate>Fee</span>: {{$root.currency.getConvertion(tx.fees) || tx.fees + 'DCR'}} </span>
     <span data-ng-show="tx.size"
       class="txvalues txvalues-default"><span translate>Size</span>: {{tx.size}} bytes</span>
-    <span data-ng-show="tx.isStakeGen && tx.agendas.length > 0"
-      class="txvalues txvalues-default"><span data-ng-repeat="agenda in tx.agendas track by $index"> {{agenda}} </span></span>
+    <span data-ng-show="tx.isStakeGen && tx.agendas.length > 0"><span data-ng-repeat="agenda in tx.agendas track by $index" class="txvalues txvalues-default txvalues-agendas">{{agenda}}</span></span>
     <span data-ng-show="!tx.isCoinBase &&  !tx.isStakeGen && !isNaN(parseFloat(tx.fees))"
       class="txvalues txvalues-default"><span translate>Fee Rate</span>:{{$root.currency.getConvertion((tx.fees * 1000) / tx.size) + ' per kB' || ((tx.fees * 1000) / tx.size) + 'DCR per kB'}}</span>
   </div>
