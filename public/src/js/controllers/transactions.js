@@ -112,9 +112,7 @@ function($scope, $rootScope, $routeParams, $location, Global, Transaction, Trans
       }
       return 0;
     });
-    console.log("before", data.txs);
     data.txs = newdata;
-    console.log("after", data.txs);
     $scope.loading = false;
 
     pagesTotal = data.pagesTotal;

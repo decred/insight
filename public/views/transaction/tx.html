@@ -6,7 +6,7 @@
       </a>
       <a href="/tx/{{tx.txid}}">{{tx.txid}}</a>
       <span class="btn-copy" clip-copy="tx.txid"></span>
-      <span data-ng-if="tx.isStakeGen" class="txvalues txvalues-default" translate>Vote v{{tx.voterVersion}} {{tx.agendas.lnSupport}} {{tx.agendas.sDiff}}</span>
+      <span data-ng-if="tx.isStakeGen" class="txvalues txvalues-default" translate>Vote v{{tx.voterVersion}}</span>
       <span data-ng-if="tx.isStakeRtx" class="txvalues txvalues-default" translate>Revocation</span>
       <span data-ng-if="tx.isCoinBase" class="txvalues txvalues-default" translate>CoinBase</span>
       <span data-ng-if="tx.isStakeTx" class="txvalues txvalues-default" translate>Ticket</span>
@@ -307,6 +307,8 @@
       class="txvalues txvalues-default"><span translate>Fee</span>: {{$root.currency.getConvertion(tx.fees) || tx.fees + 'DCR'}} </span>
     <span data-ng-show="tx.size"
       class="txvalues txvalues-default"><span translate>Size</span>: {{tx.size}} bytes</span>
+    <span data-ng-show="tx.isStakeGen && tx.agendas.length > 0"
+      class="txvalues txvalues-default"><span data-ng-repeat="agenda in tx.agendas track by $index"> {{agenda}} </span></span>
     <span data-ng-show="!tx.isCoinBase &&  !tx.isStakeGen && !isNaN(parseFloat(tx.fees))"
       class="txvalues txvalues-default"><span translate>Fee Rate</span>:{{$root.currency.getConvertion((tx.fees * 1000) / tx.size) + ' per kB' || ((tx.fees * 1000) / tx.size) + 'DCR per kB'}}</span>
   </div>
