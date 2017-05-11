@@ -150,19 +150,19 @@ margin-left: 0;
 
 .insight {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 34px;
+  font-size: 60px;
   font-style: italic;
   font-weight: 700;
   overflow: hidden;
+  padding-top: 3px;
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #fffffe;
+  color: #999999;
 }
 
 .navbar-default .navbar-brand {
   color: #FFFFFF;
-  padding: 20px 15px;
 }
 
 .navbar-form .form-control {
