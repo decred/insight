@@ -43,7 +43,8 @@
     "start": "INSIGHT_FORCE_RPC_SYNC=1 INSIGHT_PUBLIC_PATH=public node node_modules/.bin/insight-bitcore-api"
   },
   "dependencies": {
-    "insight-bitcore-api": "git://github.com/decred/insight-api.git#master"
+    "insight-bitcore-api": "decred/insight-api",
+    "wide-align": "1.1.0"
   },
   "devDependencies": {
     "bower": "~1.2.8",
@@ -54,7 +55,7 @@
     "grunt-contrib-uglify": "~0.3.2",
     "grunt-contrib-watch": "*",
     "grunt-macreload": "*",
-    "grunt-css": "jcvernaleo/grunt-css#master",
+    "grunt-css": "jcvernaleo/grunt-css",
     "grunt-markdown": "~0.5.0",
     "grunt-angular-gettext": "^0.2.15"
   },
