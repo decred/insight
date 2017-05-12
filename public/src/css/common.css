@@ -1,22 +1,45 @@
 /* Sticky footer styles
 -------------------------------------------------- */
 @charset "UTF-8";
-@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700";
-
-@import "https://fonts.googleapis.com/css?family=Inconsolata:400,700";
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/inconsolata-v15-latin_vietnamese_latin-ext-700.woff'); /* IE9 Compat Modes */
+  src: local('Inconsolata-Bold'), 
+       url('/fonts/inconsolata-v15-latin_vietnamese_latin-ext-700.woff') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/inconsolata-v15-latin_vietnamese_latin-ext-700.woff2') format('woff'), /* Modern Browsers */
+}
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/inconsolata-v15-latin_vietnamese_latin-ext-regular.woff'); /* IE9 Compat Modes */
+  src: local('Inconsolata'), 
+       url('/fonts/inconsolata-v15-latin_vietnamese_latin-ext-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/inconsolata-v15-latin_vietnamese_latin-ext-regular.woff') format('woff'), /* Modern Browsers */
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/source-sans-pro-v9-latin_vietnamese_latin-ext-300.woff'); /* IE9 Compat Modes */
+  src: local('Source Sans Pro'), 
+       url('/fonts/source-sans-pro-v9-latin_vietnamese_latin-ext-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/source-sans-pro-v9-latin_vietnamese_latin-ext-300.woff') format('woff'), /* Modern Browsers */
+}
 
 
 html,
 body {
-  color: #333333;
-  font-family: 'Ubuntu', sans-serif;
+  background-color: #ccc;
+  font-family: 'Source Sans Pro', sans-serif;
   height: 100%;
   /* The html and body elements cannot have any padding or margin. */
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: #333333;
-  font-family: 'Ubuntu', sans-serif;
+  color: #132f4b;
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
@@ -125,9 +148,10 @@ margin-left: 0;
 
 .navbar-default .navbar-nav>li>a {
   color: #F4FBE8;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   padding-left: 20px;
   padding-right: 20px;
+  font-size: 19px;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus {
@@ -152,7 +176,7 @@ margin-left: 0;
 }
 
 .insight {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 60px;
   font-style: italic;
   font-weight: 700;
@@ -210,14 +234,14 @@ margin-left: 0;
 
 #search::-webkit-input-placeholder {
   color: #43a2ca;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-style: italic;
   font-weight: 100;
 }
 
 #search::-moz-placeholder {
   color: #43a2ca;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 100;
 }
 
