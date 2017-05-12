@@ -126,7 +126,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .btn-group .btn+.btn, .btn-group .btn+.btn-group, .btn-group .btn-group+.btn, .btn-group .btn-group+.btn-group {
 margin-left: 0;
 }
-
+.table {
+  font-family: 'Inconsolata', monospace;
+}
 .table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
   background-color: #ededed;
 }

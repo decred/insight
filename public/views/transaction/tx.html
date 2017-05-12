@@ -59,11 +59,13 @@
                 <span class="glyphicon glyphicon-warning-sign"></span> 
                 <span translate>Incoherence in levelDB detected:</span> {{vin.dbError}}
               </div>
+              <!-- Commenting out for now since daemon will handle all double spends which renders this irrelevant
               <div data-ng-show="vin.doubleSpentTxID" class="text-danger"> 
                 <span class="glyphicon glyphicon-warning-sign"></span> 
                 <span translate>Double spent attempt detected. From tx:</span> 
                 <a href="/tx/{{<vin class=""></vin>doubleSpentTxID}}">{{vin.doubleSpentTxID}},{{vin.doubleSpentIndex}}</a>
               </div>
+              -->
             </div> <!-- END OF PANEL BODY -->
           </div> <!-- END OF PANEL-DEFAULT -->
           <div class="small" style="margin-left:0.7em; word-wrap:break-word;" data-ng-class="{true: 'v_highlight', false: ''}[from_vin == true && v_index == vin.n]" >
