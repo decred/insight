@@ -32,7 +32,6 @@
 
 html,
 body {
-  background-color: #ccc;
   font-family: 'Source Sans Pro', sans-serif;
   height: 100%;
   /* The html and body elements cannot have any padding or margin. */
@@ -174,7 +173,40 @@ margin-left: 0;
 .nav-tabs.nav-justified>li>a:hover {
   cursor: pointer;
 }
+.gradient {
+  background: linear-gradient(to right, #F9FBFC 0%, #F9FBFC 60%, #F4F7F9 50%, #F4F7F9 100%);
+}
+.col-md-7, .col-md-4 {
+  padding: 80px 0 0 0;
+}
+.col-md-7 {
+  background-color: #fff;
+}
+.col-md-7 .column-top-half {
+  background-color: #fff;
+  padding-bottom: 25px;
+}
+.col-md-7  .btn-default {
+  margin: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #578FFD;
+  padding: 9px 36px;
+  border-color: transparent;
 
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.col-md-7 .btn-default:hover{background-color: #f4f7f9;}
+.col-md-7 .btn-default:focus{background-color: #e9f8fe;}
+.col-md-7 hr {
+  margin-top: -16px;
+}
+.col-md-7.column-lower-half {
+  padding-top: 30px;
+}
 .insight {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 60px;
@@ -364,9 +396,20 @@ margin-left: 0;
   padding: 15px;
   border: 1px solid #eee;
 }
-
 .btn {
-  border-radius: 2px;
+  font-size: 1.6rem;
+  color: #2970ff;
+  background-color: #fff;
+  border-color: #2970ff;
+  margin: 40px 10px 0 0;
+  color: #2970ff;
+  border-color: #2970ff;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 16px 0;
+  width: 162px;
+  position: relative;
 }
 .btn-primary {
   background-color: #43a2ca;
@@ -497,7 +540,7 @@ margin-left: 0;
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
-#wrap > .container { padding: 70px 15px 0; }
+#wrap > .container { padding: 80px 15px 0; background-color: #F4F7F9; width: 100% }
 
 #footer > .container { padding: auto 15px; }
 
