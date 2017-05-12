@@ -176,10 +176,10 @@ margin-left: 0;
 .gradient {
   background: linear-gradient(to right, #F9FBFC 0%, #F9FBFC 60%, #F4F7F9 50%, #F4F7F9 100%);
 }
-.col-md-7, .col-md-4 {
+.layout.col-md-7, .layout.col-md-4 {
   padding: 80px 0 0 0;
 }
-.col-md-7 {
+.layout .col-md-7 {
   background-color: #fff;
 }
 .col-md-7 .column-top-half {
@@ -444,38 +444,33 @@ margin-left: 0;
   background-color: #AC0015;
   border: 2px solid #6C0000;
 }
-
-.txvalues {
-  display: inline-block;
-  padding: .7em 2em;
-  font-size: 13px;
-  text-transform: uppercase;
-  font-weight:100;
-  color: #fff;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: .25em;
-}
-
-.txvalues-primary {
-  background-color: #6BA65E;
-}
-
-.txvalues-default {
-  background-color: #EBEBEB;
-  color: #333;
-}
-.txvalues-agendas {
-  margin-right: 3px;
-}
-.txvalues-success {
-  background-color: #2FA4D7;
-}
-
-.txvalues-danger {
-  background-color: #AC0015;
-}
+.txvalues {    
+  margin: 5px 5px 0 0;
+    color: #fff;
+    text-transform: uppercase;
+    width: 162px;
+    padding: 15px 0;
+    text-align: center;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+  .txvalues-success {
+    background-color: #41bf53;
+  }
+  .txvalues-primary {
+    background-color: #2970ff;
+  }
+  .txvalues-default {
+    background-color: #8997a5;
+  } 
+  .txvalues-default.fee {
+    width: 217px;
+  }
+  .txvalues-danger {
+    width: 197px;
+    background-color: #AC0015;
+  }
 
 .txvalues-normal {
   background-color: transparent;
@@ -492,6 +487,7 @@ margin-left: 0;
   color: #fff;
   height: 51px;
   overflow: hidden;
+
 }
 
 #footer a.insight {
@@ -540,7 +536,7 @@ margin-left: 0;
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
-#wrap > .container { padding: 80px 15px 0; background-color: #F4F7F9; width: 100% }
+#wrap > .container { padding: 80px 15px 0;  width: 100% }
 
 #footer > .container { padding: auto 15px; }
 
@@ -904,35 +900,29 @@ a.v_highlight_more {
     min-height: 80px;
   }
   #search { color: #000; }
-  .txvalues {
-    display: block;
-    margin: 5px;
-    padding: 0.5em 2em;
-    font-size: 11px;
+  .txvalues {    
+    margin: 26px 10px 0 0;
+    color: #fff;
+    width: 162px;
+    padding: 15px 0;
+    text-align: center;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.3rem;
   }
   .navbar-default .navbar-nav .open .dropdown-menu>li>a {
     color: #fff;
   }
-  .txvalues {
-    display: inline;
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-  }
   .txvalues-success {
-    background: none;
-    color: #2FA4D7;
+    color: #41bf53;
   }
   .txvalues-primary {
-    background: none;
-    color: #43A2CA;
+    color: #2970ff;
   }
   .txvalues-default {
-    background: none;
     color: #A09E9E;
   }
   .txvalues-danger {
-    background: none;
     color: #AC0015;
   }
   .btn-expand {

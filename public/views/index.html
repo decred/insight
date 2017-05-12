@@ -5,7 +5,7 @@
 <section data-ng-controller="IndexController" data-ng-init="index()">
   <div class="container">
     <div id="home" class="row">
-      <div class="col-xs-15 col-md-7">
+      <div class="layout col-xs-15 col-md-7">
         <div id="search-form-mobile" class="visible-xs" data-ng-include src="'/views/includes/search.html'"></div>
         <h1 translate>Latest Blocks</h1>
         <table class="table table-hover table-striped" style="table-layout: fixed">
@@ -20,17 +20,17 @@
             </tr>
           </thead>
           <tbody>
-          <tr data-ng-show="!blocks.length"><td colspan="4" translate>Waiting for blocks...</td></tr>
-          <tr class="fader" data-ng-repeat='b in blocks' data-ng-if='b.height!=-1'>
-            <td>
-              <a href="/block/{{b.hash}}">{{b.height}}</a>
-            </td>
-            <td><span class="ellipsis">{{humanSince(b.time)}}</span></td>
-            <td class="text-right">{{b.txlength}}</td>
-            <td class="text-right hidden-xs">{{b.voters}}</td>
-            <td class="text-right hidden-xs">{{b.freshstake}}</td>
-            <td class="text-right">{{b.size}}</td>
-          </tr>
+            <tr data-ng-show="!blocks.length"><td colspan="4" translate>Waiting for blocks...</td></tr>
+            <tr class="fader" data-ng-repeat='b in blocks' data-ng-if='b.height!=-1'>
+              <td>
+                <a href="/block/{{b.hash}}">{{b.height}}</a>
+              </td>
+              <td><span class="ellipsis">{{humanSince(b.time)}}</span></td>
+              <td class="text-right">{{b.txlength}}</td>
+              <td class="text-right hidden-xs">{{b.voters}}</td>
+              <td class="text-right hidden-xs">{{b.freshstake}}</td>
+              <td class="text-right">{{b.size}}</td>
+            </tr>
           </tbody>
         </table>
         <div class="btn-more">
@@ -45,17 +45,17 @@
             </tr>
           </thead>
           <tbody>
-          <tr data-ng-show="!txs.length"><td colspan="3" translate>Waiting for transactions...</td></tr>
-          <tr class="fader" data-ng-repeat='tx in txs'>
-            <td>
-              <a class="ellipsis" href="/tx/{{tx.txid}}">{{tx.txid}}</a>
-            </td>
-            <td class="text-right"><span class="ellipsis">{{$root.currency.getConvertion(tx.valueOut) || tx.valueOut + ' DCR'}}</span></td>
-          </tr>
+            <tr data-ng-show="!txs.length"><td colspan="3" translate>Waiting for transactions...</td></tr>
+            <tr class="fader" data-ng-repeat='tx in txs'>
+              <td>
+                <a class="ellipsis" href="/tx/{{tx.txid}}">{{tx.txid}}</a>
+              </td>
+              <td class="text-right"><span class="ellipsis">{{$root.currency.getConvertion(tx.valueOut) || tx.valueOut + ' DCR'}}</span></td>
+            </tr>
           </tbody>
         </table>
       </div>
-      <div class="col-xs-15 col-md-4 col-md-offset-1">
+      <div class="layout col-xs-15 col-md-4 col-md-offset-1">
         <h2 translate>About</h2>
         <p translate><strong>Powered by insight</strong>, an <a href="https://insight.is/"
           target="_blank">open-source blockchain explorer</a>. with complete REST and websocket APIs that can be used for writing web wallets and other apps  that need more advanced blockchain queries than provided by dcrd RPC.  Check out the <a href="http://github.com/decred/insight" target="_blank">source code</a>.</p>
