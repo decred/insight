@@ -204,6 +204,12 @@ margin-left: 0;
 .col-md-7 hr {
   margin-top: -16px;
 }
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
 .col-md-7.column-lower-half {
   padding-top: 30px;
 }
@@ -444,6 +450,11 @@ margin-left: 0;
   background-color: #AC0015;
   border: 2px solid #6C0000;
 }
+
+.blocks {
+  width: 195px;
+  color: #fff;
+}
 .txvalues {    
   margin: 5px 5px 0 0;
     color: #fff;
@@ -496,8 +507,8 @@ margin-left: 0;
   }
 
   .svg-calender {
-    height: 16px;
-    width: 16px;
+    height: 25px;
+    width: 25px;
   }
   .glyphicon-chevron-left {
     background-image: url('/img/sprites.svg#previous');
@@ -559,7 +570,10 @@ margin-left: 0;
   border-top: 1px solid #EAEAEA;
   padding: 15px 0 0 0;
 }
-
+.date {
+    font-size: 3.4rem;
+    color: #2970ff;
+}
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */

@@ -35,19 +35,20 @@
         </tbody>
       </table>
       <div data-ng-if="pagination.more">
-        <a class="btn btn-primary" href="/blocks-date/{{pagination.current}}" data-ng-show="{{before}}">Latest block from date</a>
-        <a class="btn btn-primary" href="/blocks-date/{{pagination.current}}/{{pagination.moreTs}}">Older blocks from this date</a>
+        <a class="blocks btn btn-primary right" href="/blocks-date/{{pagination.current}}" data-ng-show="{{before}}">Latest block from date</a>
+        <a class="blocks btn btn-primary left" href="/blocks-date/{{pagination.current}}/{{pagination.moreTs}}">Older blocks from this date</a>
       </div>
     </div>
     <div class="layout col-xs-15 col-md-4 col-md-offset-1">
-			<div class="row">
+			<div class="row" data-ng-if="pagination.current">
 				<div class="col-xs-15 col-md-15  column-full-padding column-blocks-mined-on" id="column-blocks-mined-on">
 						<h1>Blocks mined on:</h1>
-							<p datepicker-popup show-button-bar="false" data-ng-click="openCalendar($event)" data-ng-model="dt" is-open="opened" data-ng-required="true">{{pagination.current}}<span class="utc">UTC</span> 
+							<span class="date">{{pagination.current}} <span class="utc">UTC </span></span>
+              <a datepicker-popup show-button-bar="false" data-ng-click="openCalendar($event)" data-ng-model="dt" is-open="opened" data-ng-required="true"> 
 								<svg class="svg-calender">
-								<use xlink:href="img/sprites.svg#calender" />
+								  <use xlink:href="img/sprites.svg#calender" />
 								</svg>
-              </p>
+              </a><br>
 							<a class="btn btn-default btn-left" href="/blocks-date/{{pagination.prev}}">
 								<svg class="svg-previous">
 								  <use xlink:href="img/sprites.svg#previous" />
@@ -63,16 +64,6 @@
 				</div>
       <div class="m20v text-center text-muted" data-ng-if="!pagination.current">
         <span translate>Loading Selected Date...</span>
-      </div>
-      <div data-ng-if="pagination.current">
-        <p class="lead text-center m20v"  data-ng-show="loading">&nbsp;</p>
-        <p class="text-center m20v"  data-ng-show="pagination.isToday && !loading" translate>Today</p>
-        <p class="text-center m20v"  data-ng-show="!pagination.isToday && !loading">{{humanSince(pagination.currentTs)}}
-        <p class="text-center m20v"  data-ng-show="loading">&nbsp;</p>
-        <div class="m50v text-center">
-          <a class="btn btn-primary" href="/blocks-date/{{pagination.prev}}"><small>&larr; {{pagination.prev}}</small></a>
-          <a class="btn btn-primary" href="/blocks-date/{{pagination.next}}" data-ng-show="!pagination.isToday"><small>{{pagination.next}} &rarr;</small></a>
-        </div>
       </div>
     </div>
   </div>
