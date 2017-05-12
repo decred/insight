@@ -479,6 +479,34 @@ margin-left: 0;
   font-size: 14px;
   font-weight: normal;
 }
+  .svg-previous, .svg-next {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+  }
+
+  .svg-previous {
+    left: 10px;
+    top: 17px;
+  }
+
+  .svg-next {
+    right: 10px;
+    top: 18px;
+  }
+
+  .svg-calender {
+    height: 16px;
+    width: 16px;
+  }
+  .glyphicon-chevron-left {
+    background-image: url('/img/sprites.svg#previous');
+    background-size: 10px;
+  }
+  .glyphicon-chevron-right {
+  background-image: url('/img/sprites.svg#next');
+  background-size: 10px;
+  }
 .progress-bar-info { background-color: #43A2CA; }
 
 /* Set the fixed height of the footer here */
@@ -929,7 +957,11 @@ a.v_highlight_more {
     font-size: 18px;
   }
 }
-
+.dropdown-menu .btn {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
 @media (min-width: 1200px) {
   .col-gray-fixed {
     width: 280px;
