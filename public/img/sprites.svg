@@ -2,41 +2,11 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
 
-<symbol viewBox="0 0 40 40" id="svg-decred-logo">
-	<path style="clip-path:url(#SVGID_2_);fill:#FFFFFF;" d="M17.6,23.7h9.9c3.7,0,6.7-3,6.7-6.7c0-3.7-3-6.7-6.7-6.7h-3.2l-6.7-5.9
-			h9.9c6.9,0,12.5,5.6,12.5,12.5c0,5.2-3.2,9.7-7.8,11.6l7.8,6.8h-8.9L17.6,23.7z"/>
-		<path style="clip-path:url(#SVGID_2_);fill:#FFFFFF;" d="M22.4,16.3h-9.9c-3.7,0-6.7,3-6.7,6.7c0,3.7,3,6.7,6.7,6.7h3.2l6.7,5.9
-			h-9.9C5.6,35.4,0,29.8,0,22.9c0-5.3,3.2-9.7,7.8-11.6L0,4.6h8.9L22.4,16.3z"/>
-</symbol>
-<symbol viewBox="0 0 26 26" id="svg-search">
-	<path id="XMLID_549_" style="fill:#2970FF;" d="M26,24.5l-6.9-6.9c1.5-1.9,2.4-4.2,2.4-6.8C21.5,4.8,16.7,0,10.7,0
-	C4.8,0,0,4.8,0,10.7c0,5.9,4.8,10.7,10.7,10.7c2.6,0,4.9-0.9,6.8-2.4l6.9,6.9L26,24.5z M2.4,10.7c0-4.6,3.7-8.3,8.3-8.3
-	c4.6,0,8.3,3.7,8.3,8.3c0,4.6-3.7,8.3-8.3,8.3C6.1,19.1,2.4,15.3,2.4,10.7z"/>
-</symbol>
 <symbol viewBox="0 0 16 16" id="dcr-down">
 	<polygon style="fill:#FFFFFF;" points="3,5.5 8,10.5 13,5.5 "/>
 </symbol>
 <symbol viewBox="0 0 16 16" id="connected">
 	<polygon style="fill:#FFFFFF;" points="13,5.4 12.4,4.8 7.1,10 3.6,6.5 3,7.1 7.1,11.2 7.1,11.2 7.1,11.2 "/>
-</symbol>
-<symbol viewBox="0 0 16 16" id="calender">
-	<path style="fill:#2970FF;" d="M11.7,4.3V3h3.2v11.9H1.1V3h3.2v1.4h1.1V3h5.2v1.4H11.7z M10.6,0v1.9H5.4V0H4.3v1.9H0V16h16V1.9
-		h-4.3V0H10.6z"/>
-	<rect x="2.8" y="6.9" style="fill:#2970FF;" width="2.5" height="1.1"/>
-	<rect x="2.8" y="12.1" style="fill:#2970FF;" width="2.5" height="1.1"/>
-	<rect x="2.8" y="9.5" style="fill:#2970FF;" width="2.5" height="1.1"/>
-	<rect x="6.8" y="6.9" style="fill:#2970FF;" width="2.5" height="1.1"/>
-	<rect x="6.8" y="12.1" style="fill:#2970FF;" width="2.5" height="1.1"/>
-	<rect x="6.8" y="9.5" style="fill:#2970FF;" width="2.5" height="1.1"/>
-	<rect x="10.7" y="6.9" style="fill:#2970FF;" width="2.5" height="1.1"/>
-	<rect x="10.7" y="12.1" style="fill:#2970FF;" width="2.5" height="1.1"/>
-	<rect x="10.7" y="9.5" style="fill:#2970FF;" width="2.5" height="1.1"/>
-</symbol>
-<symbol viewBox="0 0 16 16" id="previous">
-	<polygon style="fill:#2970FF;" points="11.7,3.4 11,2.7 10.3,2 4.3,8 4.3,8 4.3,8 10.3,14 11,13.3 11.7,12.6 7.1,8 "/>
-</symbol>
-<symbol viewBox="0 0 16 16" id="next">
-	<polygon style="fill:#2970FF;" points="4.3,12.6 5,13.3 5.7,14 11.7,8 11.7,8 11.7,8 5.7,2 5,2.7 4.3,3.4 8.9,8 "/>
 </symbol>
 <symbol viewBox="0 0 16 16" id="plus">
 	<polygon style="fill:#132F4B;" points="14,7.1 9,7.1 9,2 7,2 7,7.1 2,7.1 2,8.1 2,9.1 7,9.1 7,14 8,14 9,14 9,9.1 14,9.1 "/>

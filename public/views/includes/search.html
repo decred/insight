@@ -2,9 +2,7 @@
   <div class="form-group" data-ng-class="{'has-error': badQuery}">
     <div class="input-group">
 			<span class="input-group-addon" id="basic-addon1">
-				<svg class="svg-search">
-					<use xlink:href="img/sprites.svg#svg-search" />
-				</svg>
+				<span class="svg-search"></span>
 			</span>
       <input id="search" type="text" class="form-control" data-ng-model="q" data-ng-class="{'loading': loading}" placeholder="{{'Search for block, transaction or address'|translate}}" data-ng-submit="search()" focus="true">
     </div>
