@@ -5,7 +5,7 @@
         
       </a>
       <a class="transactionId" href="/tx/{{tx.txid}}">{{tx.txid}}</a>
-      <span class="btn-copy" clip-copy="tx.txid"></span>
+      <span class="btn-copy" clip-copy="tx.txid" ngclipboard data-clipboard-text="{{tx.txid}}"></span>
       <span data-ng-if="tx.isStakeGen" class="tx-state-spacing txvalues txvalues-default" translate>Vote v{{tx.voterVersion}}</span>
       <span data-ng-if="tx.isStakeRtx" class="tx-state-spacing txvalues txvalues-default" translate>Revocation</span>
       <span data-ng-if="tx.isCoinBase" class="tx-state-spacing txvalues txvalues-default" translate>CoinBase</span>
@@ -73,7 +73,7 @@
             <p><strong>scriptSig</strong></p>
               <div data-ng-repeat="item in vin.scriptSig.asm | split:' '" class="">
                 <p class="col-md-11 ellipsis text-muted">{{item}}</p>
-                <p class="btn-copy" clip-copy="item"></p>
+                <p class="btn-copy" clip-copy="item" ngclipboard data-clipboard-text="item"></p>
               </div>
           </div>
         </div>
@@ -125,7 +125,7 @@
             <p><strong>scriptSig</strong></p>
               <div data-ng-repeat="item in vin.scriptSig.asm | split:' '" class="">
                 <p class="col-md-11 ellipsis text-muted">{{item}}</p>
-                <p class="btn-copy" clip-copy="item"></p>
+                <p class="btn-copy" clip-copy="item" ngclipboard data-clipboard-text={{item}}></p>
               </div>
           </div>
         </div>

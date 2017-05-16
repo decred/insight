@@ -4,6 +4,7 @@ var defaultLanguage = localStorage.getItem('insight-language') || 'en';
 var defaultCurrency = localStorage.getItem('insight-currency') || 'DCR';
 
 angular.module('insight',[
+  'ngclipboard',
   'ngAnimate',
   'ngResource',
   'ngRoute',
