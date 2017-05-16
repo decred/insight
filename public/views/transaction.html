@@ -6,7 +6,7 @@
           <h3 translate>Transaction</h3>
           <div class="ellipsis"> 
             <small>{{tx.txid}}</small> 
-            <span class="btn-copy" clip-copy="tx.txid"></span>
+            <span class="btn-copy" ngclipboard data-clipboard-text={{tx.txid}}></span>
           </div>
       </div>
       <div class="col-md-6 col-lg-5 text-right">
@@ -43,7 +43,7 @@
       <div class="well well-sm ellipsis">
         <strong translate>Transaction</strong> 
         <span class="txid text-muted">{{tx.txid}}</span>
-        <span class="btn-copy" clip-copy="tx.txid"></span>
+        <span class="btn-copy" ngclipboard data-clipboard-text={{tx.txid}}></span>
       </div>
       <h2 translate>Summary</h2>
       <table class="table" style="table-layout: fixed">
@@ -82,7 +82,7 @@
           <td><strong>Coinbase</strong></td>
           <td class="text-muted text-right">
             <div class="ellipsis">
-                <span class="btn-copy ng-isolate-scope" clip-copy="tx.vin[0].coinbase"></span>
+                <span class="btn-copy ng-isolate-scope" ngclipboard data-clipboard-text={{tx.vin[0].coinbase}}></span>
                 <span class="ng-binding">{{tx.vin[0].coinbase}}</span>
             </div>
           </td>
