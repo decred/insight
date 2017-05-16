@@ -5,7 +5,7 @@
         
       </a>
       <a class="transactionId" href="/tx/{{tx.txid}}">{{tx.txid}}</a>
-      <span class="btn-copy" ngclipboard data-clipboard-text="{{tx.txid}}"></span>
+      <span class="btn-copy" ngclipboard data-clipboard-text="{{tx.txid}}" ngclipboard-success="onSuccess(e);" ngclipboard-error="onError(e);"></span>
       <span data-ng-if="tx.isStakeGen" class="tx-state-spacing txvalues txvalues-default" translate>Vote v{{tx.voterVersion}}</span>
       <span data-ng-if="tx.isStakeRtx" class="tx-state-spacing txvalues txvalues-default" translate>Revocation</span>
       <span data-ng-if="tx.isCoinBase" class="tx-state-spacing txvalues txvalues-default" translate>CoinBase</span>
