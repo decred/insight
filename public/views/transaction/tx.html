@@ -1,10 +1,10 @@
 <div class="line-bot row" data-ng-hide="!tx">
   <div class="col-xs-7 col-md-8">
     <div class="ellipsis">
-      <a class="btn-expand" href="#" title="Show/Hide items details" data-ng-click="itemsExpanded = !itemsExpanded">
-        <span class="glyphicon glyphicon-plus-sign" data-ng-class="{'glyphicon-minus-sign': itemsExpanded}"></span>
+      <a class="svg-plus" data-ng-class="{'svg-minus': itemsExpanded}" href="#" title="Show/Hide items details" data-ng-click="itemsExpanded = !itemsExpanded">
+        
       </a>
-      <a href="/tx/{{tx.txid}}">{{tx.txid}}</a>
+      <a class="transactionId" href="/tx/{{tx.txid}}">{{tx.txid}}</a>
       <span class="btn-copy" clip-copy="tx.txid"></span>
       <span data-ng-if="tx.isStakeGen" class="txvalues txvalues-default" translate>Vote v{{tx.voterVersion}}</span>
       <span data-ng-if="tx.isStakeRtx" class="txvalues txvalues-default" translate>Revocation</span>

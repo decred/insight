@@ -483,7 +483,7 @@ margin-left: 0;
     background-color: #2970ff;
   }
   .txvalues-default {
-    background-color: #8997a5;
+    background-color: #c4cbd2;
   } 
   .txvalues-default.fee {
     width: 217px;
@@ -526,7 +526,28 @@ margin-left: 0;
     float: right;
     margin-top: 3px;
   }
-
+  .svg-plus {
+    height: 18px;
+    width: 18px;
+    background-image: url('/img/plus.svg');
+    background-size: 18px;
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+  .svg-minus {
+    height: 18px;
+    width: 18px;
+    background-image: url('/img/arrow.svg');
+    background-size: 18px;
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+  .svg-plus:hover, .svg-minue:hover {
+    opacity: 0.9;
+  }
+  .transactionId {
+    font-family: 'Inconsolata', monospace;
+  }
   .svg-calender {
     height: 25px;
     width: 25px;
@@ -699,14 +720,10 @@ margin-left: 0;
   vertical-align: sub;
 }
 
-.btn-expand {
-  color: #9b9b9b;
-  vertical-align: middle;
-}
-
 .btn-copy:hover, .btn-expand:hover {
   color: #000;
   text-decoration: none;
+  opacity: 0.9;
 }
 
 .btn-copy {
@@ -991,9 +1008,6 @@ a.v_highlight_more {
   }
   .txvalues-danger {
     color: #AC0015;
-  }
-  .btn-expand {
-    font-size: 18px;
   }
 }
 .dropdown-menu .btn {
