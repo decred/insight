@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg height="16px" width="16px" viewBox="0 0 16 16" id="calender" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+	<path style="fill:#2970FF;" d="M11.7,4.3V3h3.2v11.9H1.1V3h3.2v1.4h1.1V3h5.2v1.4H11.7z M10.6,0v1.9H5.4V0H4.3v1.9H0V16h16V1.9
+		h-4.3V0H10.6z"/>
+	<rect x="2.8" y="6.9" style="fill:#2970FF;" width="2.5" height="1.1"/>
+	<rect x="2.8" y="12.1" style="fill:#2970FF;" width="2.5" height="1.1"/>
+	<rect x="2.8" y="9.5" style="fill:#2970FF;" width="2.5" height="1.1"/>
+	<rect x="6.8" y="6.9" style="fill:#2970FF;" width="2.5" height="1.1"/>
+	<rect x="6.8" y="12.1" style="fill:#2970FF;" width="2.5" height="1.1"/>
+	<rect x="6.8" y="9.5" style="fill:#2970FF;" width="2.5" height="1.1"/>
+	<rect x="10.7" y="6.9" style="fill:#2970FF;" width="2.5" height="1.1"/>
+	<rect x="10.7" y="12.1" style="fill:#2970FF;" width="2.5" height="1.1"/>
+	<rect x="10.7" y="9.5" style="fill:#2970FF;" width="2.5" height="1.1"/>
+</svg>
