@@ -391,7 +391,6 @@ margin-left: 0;
   margin-top: 0;
   margin-bottom: 10px;
 }
-
 .icon-block {
   color: #FFFFFF;
   font-size: 35px;
@@ -492,7 +491,9 @@ margin-left: 0;
     width: 197px;
     background-color: #AC0015;
   }
-
+.tx-state-spacing {
+  margin-left: 20px;
+}
 .txvalues-normal {
   background-color: transparent;
   text-transform: none;

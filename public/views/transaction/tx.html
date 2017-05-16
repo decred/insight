@@ -6,10 +6,10 @@
       </a>
       <a class="transactionId" href="/tx/{{tx.txid}}">{{tx.txid}}</a>
       <span class="btn-copy" clip-copy="tx.txid"></span>
-      <span data-ng-if="tx.isStakeGen" class="txvalues txvalues-default" translate>Vote v{{tx.voterVersion}}</span>
-      <span data-ng-if="tx.isStakeRtx" class="txvalues txvalues-default" translate>Revocation</span>
-      <span data-ng-if="tx.isCoinBase" class="txvalues txvalues-default" translate>CoinBase</span>
-      <span data-ng-if="tx.isStakeTx" class="txvalues txvalues-default" translate>Ticket</span>
+      <span data-ng-if="tx.isStakeGen" class="tx-state-spacing txvalues txvalues-default" translate>Vote v{{tx.voterVersion}}</span>
+      <span data-ng-if="tx.isStakeRtx" class="tx-state-spacing txvalues txvalues-default" translate>Revocation</span>
+      <span data-ng-if="tx.isCoinBase" class="tx-state-spacing txvalues txvalues-default" translate>CoinBase</span>
+      <span data-ng-if="tx.isStakeTx" class="tx-state-spacing txvalues txvalues-default" translate>Ticket</span>
     </div>
   </div>
   <div class="col-xs-5 col-md-4 text-right text-muted">
