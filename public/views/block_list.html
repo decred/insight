@@ -48,16 +48,12 @@
 								<span class="svg-calender"></span>
               </a><br>
 							<a class="btn btn-default btn-left" href="/blocks-date/{{pagination.prev}}">
-								<svg class="svg-previous">
-								  <use xlink:href="img/sprites.svg#previous" />
-								</svg>
-								{{pagination.prev}}
+								<span class="svg-previous"></span>
+								<span class="previous-date">{{pagination.prev}}</span>
               </a> 
 							<a class="btn btn-default btn-right" href="/blocks-date/{{pagination.next}}">
-								{{pagination.next}}
-								<svg class="svg-next">
-							<use xlink:href="img/sprites.svg#next" />
-							</svg>
+								<span class="next-date">{{pagination.next}}</span>
+								<span class="svg-next"></span>
 						</a>
 				</div>
       <div class="m20v text-center text-muted" data-ng-if="!pagination.current">
