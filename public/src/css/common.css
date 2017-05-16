@@ -482,7 +482,8 @@ margin-left: 0;
     background-color: #2970ff;
   }
   .txvalues-default {
-    background-color: #c4cbd2;
+    color: #333333;
+    background-color: #ebebeb;
   } 
   .txvalues-default.fee {
     width: 217px;
