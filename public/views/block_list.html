@@ -40,13 +40,13 @@
       </div>
     </div>
     <div class="layout col-xs-15 col-md-4 col-md-offset-1">
-			<div class="row" data-ng-if="pagination.current">
+			<div class="row" >
 				<div class="col-xs-15 col-md-15  column-full-padding column-blocks-mined-on" id="column-blocks-mined-on">
 						<h1>Blocks mined on:</h1>
-							<span class="date">{{pagination.current}} <span class="utc">UTC </span></span>
-              <a datepicker-popup show-button-bar="false" data-ng-click="openCalendar($event)" data-ng-model="dt" is-open="opened" data-ng-required="true"> 
+              <p datepicker-popup show-button-bar="false" data-ng-click="openCalendar($event)" data-ng-model="dt" is-open="opened" data-ng-required="true">
+							  <span class="date">{{pagination.current}} <span class="utc">UTC </span></span>
 								<span class="svg-calender"></span>
-              </a><br>
+              </p>
 							<a class="btn btn-default btn-left" href="/blocks-date/{{pagination.prev}}">
 								<span class="svg-previous"></span>
 								<span class="previous-date">{{pagination.prev}}</span>

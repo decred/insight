@@ -556,14 +556,6 @@ margin-left: 0;
     background-repeat: no-repeat;
     display: inline-block;
   }
-  .glyphicon-chevron-left {
-    background-image: url('/img/previous.svg');
-    background-size: 10px;
-  }
-  .glyphicon-chevron-right {
-    background-image: url('/img/next.svg');
-    background-size: 10px;
-  }
 .progress-bar-info { background-color: #43A2CA; }
 
 /* Set the fixed height of the footer here */
