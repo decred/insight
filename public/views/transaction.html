@@ -67,6 +67,11 @@
           <td data-ng-show="!tx.time" class="text-muted text-right">N/A</td>
         </tr>
         <tr>
+          <td><strong translate>Expire on</strong></td>
+          <td data-ng-show="tx.time" class="text-muted text-right">{{tx.expiry}}</td>
+          <td data-ng-show="!tx.time" class="text-muted text-right">N/A</td>
+        </tr>
+        <tr>
           <td><strong translate>Included in Block</strong></td>
           <td data-ng-show="tx.blockhash" class="text-muted text-right"> 
             <div class="ellipsis">
