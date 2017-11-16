@@ -1022,3 +1022,57 @@ a.v_highlight_more {
     width: 350px;
   }
 }
+
+.form-control {
+    width: 350px
+}
+
+
+}
+.block_container {
+    padding-left: 30px!important
+}
+input:focus::-webkit-input-placeholder {
+    color: transparent!important;
+    text-align: center
+}
+input:focus:-moz-placeholder {
+    color: transparent!important;
+    text-align: center
+}
+input:focus::-moz-placeholder {
+    color: transparent!important;
+    text-align: center
+}
+input:focus:-ms-input-placeholder {
+    color: transparent!important;
+    text-align: center
+}
+::-webkit-input-placeholder {
+    text-align: center;
+    color: #5a6d81;
+    font-size: 13px!important;
+    font-family: 'Source Sans Pro, Regular'!important
+}
+:-moz-placeholder {
+    text-align: center;
+    color: #5a6d81;
+    font-size: 13px!important;
+    font-family: 'Source Sans Pro, Regular'!important
+}
+::-moz-placeholder {
+    text-align: center;
+    color: #5a6d81;
+    font-size: 13px!important;
+    font-family: 'Source Sans Pro, Regular'!important
+}
+:-ms-input-placeholder {
+    text-align: center;
+    color: #5a6d81;
+    font-size: 13px!important;
+    font-family: 'Source Sans Pro, Regular'!important
+}
+li.dropdown {
+    background: #132f4b;
+    margin-left: 5px;
+}
